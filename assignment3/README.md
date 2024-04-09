@@ -33,7 +33,9 @@ $ kubectl get ingress
 ```
 The commands above should return responses similar to:
 ![Alt text](https://github.com/Domgartner/ensf400-lab8-kubernetes-2/blob/main/assignment3/screenshots/Screenshot%202024-04-08%20at%201.20.29%E2%80%AFPM.png)
+
 ![Alt text](https://github.com/Domgartner/ensf400-lab8-kubernetes-2/blob/main/assignment3/screenshots/Screenshot%202024-04-08%20at%201.20.46%E2%80%AFPM.png)
+
 ![Alt text](https://github.com/Domgartner/ensf400-lab8-kubernetes-2/blob/main/assignment3/screenshots/Screenshot%202024-04-08%20at%201.21.07%E2%80%AFPM.png)
 
 You can also check all of the services running through the command:
