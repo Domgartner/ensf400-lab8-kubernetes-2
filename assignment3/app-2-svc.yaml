@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-2-service       # Name of the Service
+spec:
+  selector:
+    app: app-2              # Selector to match Pods
+  ports:
+  - port: 8080              # Port on which the Service listens
+    protocol: TCP           # Protocol used by the port
+    targetPort: 3000        # Port on the Pod to forward to
+  type: ClusterIP           # Type of Service

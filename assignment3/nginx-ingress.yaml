@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /nginx            # Path within the host
+        pathType: Prefix
+        backend:
+          service:
+            name: nginx-service   # Name of the backend Service
+            port:
+              number: 80          # Port of the backend Service
+metadata:
+  name: nginx-ingress             # Name of the Ingress
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+  labels:
+    app: nginx                    # Labels for the Ingress

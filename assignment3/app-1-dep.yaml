@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-1-deployment        # Name of the Deployment
+spec:
+  replicas: 1                   # Number of replica Pods to create
+  selector:
+    matchLabels:
+      app: app-1                # Label selector for the Pods controlled by this Deployment
+  template:
+    metadata:
+      labels:
+        app: app-1              # Labels to apply to the Pods
+    spec:
+      containers:
+      - name: app-1             # Name of the container
+        image: ghcr.io/denoslab/ensf400-sample-app:v1
+        imagePullPolicy: Always   # Policy for pulling the image
+        ports:
+        - containerPort: 3000     # Port the container listens on
